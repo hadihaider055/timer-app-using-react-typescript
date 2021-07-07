@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "stable"
+
+script:
+  - npm install
+  - npm test
+  - npm run build process.env.CI = true
+
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: timer-app.surge.sh
+  project: ./build/
+
+on:
+  branch: master

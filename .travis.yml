@@ -10,7 +10,7 @@ script:
 deploy:
   provider: surge
   skip_cleanup: true
-  domain: timer-app.surge.sh
+  domain: timer-app-by-hadi.surge.sh
   project: ./build/
 
 on:
